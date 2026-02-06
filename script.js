@@ -14,7 +14,7 @@ let yesScale = 1;
 // Configuration
 const messages = [
     "Are you sure?",
-    "Really? Think about it...",
+    "Really? Think about it.",
     "It'll be so cute!",
     "No way!",
     "Just say yes!",
