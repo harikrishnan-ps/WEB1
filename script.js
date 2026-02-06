@@ -78,21 +78,30 @@ function updateUI() {
     yesBtn.style.transform = `scale(${yesScale})`;
 
     // 3. Move No Button (Push Effect)
+    // 3. Move No Button (Push Effect)
     const yesBaseWidth = yesBtn.offsetWidth;
     const noBaseWidth = noBtn.offsetWidth;
+    const yesBaseHeight = yesBtn.offsetHeight;
 
     // Shrink No Button
     const noScale = Math.max(0, 1 - (noClickCount * 0.1));
 
-    // Calculate Push Distance
-    // We want the gap to remain constant.
-    const yesGrowthRight = (yesBaseWidth * (yesScale - 1)) / 2;
-    const noShrinkageLeft = (noBaseWidth * (1 - noScale)) / 2;
+    // Check if mobile (stacked layout)
+    const isMobile = window.innerWidth <= 600;
 
-    // The amount we need to physically move "No" to keep the gap constant
-    const moveAmount = Math.max(0, yesGrowthRight - noShrinkageLeft + (noClickCount * 2));
-
-    noBtn.style.transform = `translate(${moveAmount}px, 0) scale(${noScale})`;
+    if (isMobile) {
+        // Mobile: Move DOWN
+        const yesGrowthBottom = (yesBaseHeight * (yesScale - 1)) / 2;
+        // Move down to keep gap + add extra distance
+        const moveAmountY = Math.max(0, yesGrowthBottom + (noClickCount * 10));
+        noBtn.style.transform = `translate(0, ${moveAmountY}px) scale(${noScale})`;
+    } else {
+        // Desktop: Move RIGHT
+        const yesGrowthRight = (yesBaseWidth * (yesScale - 1)) / 2;
+        const noShrinkageLeft = (noBaseWidth * (1 - noScale)) / 2;
+        const moveAmountX = Math.max(0, yesGrowthRight - noShrinkageLeft + (noClickCount * 10));
+        noBtn.style.transform = `translate(${moveAmountX}px, 0) scale(${noScale})`;
+    }
 
     // 4. (Animation removed to prevent conflict with growth scaling)
     yesBtn.style.animation = 'none';
