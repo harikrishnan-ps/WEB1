@@ -13,16 +13,16 @@ let yesScale = 1;
 
 // Configuration
 const messages = [
-    "Are you sure? 🥺",
-    "Really? Think about it... 💭",
-    "But we'd be so cute together! 🥰",
-    "I'll buy you ice cream! 🍦",
-    "Just say yes! ❤️",
-    "Don't break my heart... 💔",
-    "Please? 🥺",
-    "Pretty please? 🍒",
-    "Okay, now you're just being mean! 😠",
-    "I'm not giving up! 💪"
+    "Are you sure?",
+    "Really? Think about it...",
+    "It'll be so cute!",
+    "No way!",
+    "Just say yes!",
+    "Atleast once?",
+    "Please?",
+    "Pretty please?",
+    "Now or never..?",
+    "I'm not giving up!"
 ];
 
 
