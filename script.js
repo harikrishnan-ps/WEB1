@@ -87,7 +87,7 @@ function updateUI() {
     const noScale = Math.max(0, 1 - (noClickCount * 0.1));
 
     // Check if mobile (stacked layout)
-    const isMobile = window.innerWidth <= 600;
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
     if (isMobile) {
         // Mobile: Move DOWN
