@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Go On A Date With Me? 💖</title>
+    <meta name="description" content="A special question for a special person.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Dancing+Script:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="bg-gradient"></div>
+    <div class="floating-shapes" id="floating-shapes"></div>
+
+    <main class="card-container">
+        <div class="glass-card">
+            <header class="card-header">
+                <span class="sub-text">Hey Annapoorna...</span>
+                <h1 class="main-title">Will You Go On A<br>Date With Me?</h1>
+                <p class="message-text" id="message-text"></p>
+            </header>
+
+            <div class="hero-emoji" id="hero-emoji">🌹</div>
+
+            <div class="interaction-area">
+                <div class="buttons-wrapper">
+                    <button class="btn btn-yes" id="yes-btn">
+                        <span class="btn-text">Yes, I'd love to! 💖</span>
+                        <span class="btn-particles"></span>
+                    </button>
+                    <button class="btn btn-no" id="no-btn">
+                        <span class="btn-text">No😢</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Celebration Overlay -->
+    <div class="celebration-overlay" id="celebration-overlay">
+        <div class="celebration-content">
+            <h2 class="celebration-title">It's a Date! 🎉</h2>
+            <p class="celebration-msg">I knew you'd say yes! ✨</p>
+            <div class="sticker-rain">🥰💖💏🌹✨</div>
+        </div>
+        <canvas id="confetti-canvas"></canvas>
+    </div>
+
+    <script src="script.js?v=5"></script>
+</body>
+
+</html>
