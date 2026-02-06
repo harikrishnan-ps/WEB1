@@ -16,12 +16,12 @@ const messages = [
     "Are you sure?",
     "Really? Think about it.",
     "It'll be so cute!",
-    "No way!",
-    "Just say yes!",
-    "Atleast once?",
-    "Please?",
     "Pretty please?",
     "Now or never..?",
+    "Just say yes!",
+    "No way!",
+    "Atleast once?",
+    "Please?",
     "I'm not giving up!"
 ];
 
