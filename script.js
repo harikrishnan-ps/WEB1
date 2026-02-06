@@ -138,6 +138,12 @@ function updateUI() {
 // Celebration Logic
 yesBtn.addEventListener('click', () => {
     celebrationOverlay.classList.add('active');
+
+    // Reset Yes button state to prevent it from interfering
+    yesBtn.style.transform = 'scale(1)';
+    yesBtn.style.display = 'none'; // Hide it completely
+    noBtn.style.display = 'none';
+
     startConfetti();
 });
 
